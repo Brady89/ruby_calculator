@@ -25,3 +25,16 @@ describe '#add' do
 
 
 end
+describe '#subtract' do
+  it 'should subtract two positive numbers' do
+    expect(subtract(4,3)).to eq(1)
+  end
+
+  it 'should subtract two negative numbers' do
+    expect(subtract(-2,-3)).to eq(1)
+  end
+
+  it 'should not try to subtract non-numbers' do
+    expect{ subtract(4, "four") }.to raise_error(TypeError)
+  end
+end

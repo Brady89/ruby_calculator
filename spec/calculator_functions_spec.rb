@@ -25,6 +25,7 @@ describe '#add' do
 
 
 end
+
 describe '#subtract' do
   it 'should subtract two positive numbers' do
     expect(subtract(4,3)).to eq(1)
@@ -37,4 +38,19 @@ describe '#subtract' do
   it 'should not try to subtract non-numbers' do
     expect{ subtract(4, "four") }.to raise_error(TypeError)
   end
+end
+
+describe '#multiply' do
+  it 'should be able to multiply two positive numbers' do
+        expect(multiply(3,3)).to eq(9)
+    end 
+
+  it 'should be able to multiply two negative numbers' do
+        expect(multiply(-3,-3)).to eq(9)
+    end
+
+  it 'should be able to multiply by 0' do
+        expect(multiply(3,0)).to eq(0)
+    end 
+
 end

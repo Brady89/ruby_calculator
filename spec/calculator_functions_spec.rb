@@ -54,3 +54,17 @@ describe '#multiply' do
     end 
 
 end
+
+describe '#divide' do
+  it 'should be able to divide two positive numbers' do
+        expect(divide(3,3)).to eq(1)
+    end 
+
+  it 'should be able to divide two negative numbers' do
+        expect(divide(-3,-3)).to eq(1)
+    end
+
+  it 'should not be able to divide by zero' do
+        expect{divide(3,0)}.to raise_error(ArgumentError,"World ends if you try to divide by zero")
+  end
+end

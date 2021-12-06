@@ -12,4 +12,16 @@ describe '#add' do
   it 'should add one negative and one positive number' do
     expect(add(-3,3)).to eq(0)
   end
+  it 'should add numbers with decimals' do
+    expect(add(3.1,4.3)).to eq(7.4)
+  end
+
+  it 'should do correct math' do
+    expect(add(4,4)).to_not eq(12)
+  end
+  it 'should not try to add non-numbers' do
+    expect{ add(4, "four") }.to raise_error(TypeError)
+  end
+
+
 end

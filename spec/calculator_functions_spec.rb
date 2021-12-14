@@ -22,8 +22,9 @@ describe '#add' do
   it 'should not try to add non-numbers' do
     expect{ add(4, "four") }.to raise_error(TypeError)
   end
-
-
+xit 'should convert strings to integers' do 
+    expect(add("2","3")).to eq(5)
+end
 end
 
 describe '#subtract' do
